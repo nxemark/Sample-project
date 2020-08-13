@@ -1,0 +1,292 @@
+// input[id=fname]
+//     box-sizing: border-box
+//     width: 136px
+//     padding: 13px 20px 13px 50px
+//     font-size: 16px
+//     border: 4px solid #888888
+//     outline: none
+//     background-color: $bg-base
+//     background-image: url(../Images/searchicon.png)
+//     background-position: 10px 9px 
+//     background-repeat: no-repeat
+//     border-radius: 25px
+//     traisition: width 0.4s ease-in-out
+
+// input[id=fname]:focus
+//     border: 4px solid #444444
+//     border-radius: 0px
+//     background-color: #2cc491
+//     -webkit-transition: 0.5s
+//     traisition: 0.5s
+//     width: 50%
+
+
+// .image 
+//     display: block
+//     margin: auto
+//     margin-top: 25%
+//     border: 2px solid #dddddd
+//     padding: 5px
+//     border-radius: 9px
+//     width: 400px
+//     max-width: 100%
+//     height: auto
+//     transition: box-shadow 0.5s
+//     &:hover
+//         box-shadow: 0px 0px 10px 0px #5097e933 
+
+// .polaroid
+//     display: block
+//     background-color: white
+//     margin: auto
+//     margin-top: 200px
+//     width: 400px
+//     height: auto
+//     background-color: white
+//     box-shadow: 0 4px 8px 0 rgba(0,30,0,0.2), 0 8px 20px 0 rgba(30,0,0,0.19)
+//     position: relative
+//     animation-name: color
+//     animation-duration: 10s
+//     animation-
+//     animation-iteration-count: infinite
+//     animation-direction: alternate
+
+// // .polaroid::after
+// //     content: ""
+// //     position: absolute
+// //     top: 100%
+// //     left: 50%
+// //     height: 200px
+// //     width: 20px
+// //     background: black
+// //     background-color: red 
+
+        
+
+// .image
+//     width: 100%
+//     height: 100%
+//     opacity: 0.9
+
+
+// .polaroid p 
+//     padding-bottom: 15px
+//     text-align: center
+
+
+// @keyframes color
+//     0%
+//         filter: hue-rotate(0deg)
+//         left: 0px
+//     10%
+//         filter: hue-rotate(100deg)
+//         left: 10px
+        
+//     20%
+//         filter: hue-rotate(200deg)
+//         left: 20px
+//     30%
+//         filter: hue-rotate(300deg)
+//         left: 30px
+//     40%
+//         filter: hue-rotate(400deg)
+//         left: 40px
+//     50%
+//         filter: hue-rotate(500deg)
+//         left: 50px
+//     60%
+//         filter: hue-rotate(600deg)
+//         left: 60px
+//     70%
+//         filter: hue-rotate(700deg)
+//         left: 70px
+//     80%
+//         filter: hue-rotate(800deg)
+//         left: 80px
+//     90%
+//         filter: hue-rotate(900deg)
+//         left: 90px
+//     100% 
+//         filter: hue-rotate(1000deg)
+//         left: 100px
+//         transform: rotate(360deg)
+
+
+// .container
+//     position: relative
+//     width: 653px
+//     height: 980px
+//     display: block
+//     margin: auto
+//     margin-top: 5%
+
+// .image
+//     width: 100%
+//     height: auto
+  
+// .intro
+//     width: 0%
+//     height: 100%
+//     position: absolute
+//     right: 0
+//     top: 0
+//     background-color: #008cba
+//     transition: width .5s ease
+//     overflow: hidden
+//     p 
+//         position: absolute
+//         top: 45%
+//         left: 41%
+//         font-size: 30px
+//         color: white
+
+// .container:hover .intro
+//     width: 100%
+
+
+
+.image2 
+    border-radius: 5px
+    display: block
+    margin-top: 5%
+    transition: opacity .4s
+    width: 100%
+    max-width: 400px
+    &:hover
+        opacity: 0.6
+
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    width: 100%
+    height: 100%
+    padding-top: 50px
+    z-index: 1
+    background-color: rgba(0,0,0,0.9)
+    display: none
+    .close
+        position: absolute
+        top: 5px
+        right: 25px
+        font-size: 30px
+        color: #cccccc
+        transition: .3s
+        cursor: pointer
+        &:hover
+            color: #ffffff
+    .image4
+        display: block
+        margin: auto
+        width: 80%
+        object-fit: cover
+        max-width: 800px
+        cursor: pointer
+
+
+@media screen and (max-width: 700px)
+    .image4
+        width: 100% !important
+
+
+.caption
+    color: #f3f3f3
+    display: block
+    margin: auto
+    text-align: center
+    font-size: 20px
+    padding-top: 15px
+        
+
+.image4,
+.caption
+    animation-name: zoom 
+    animation-duration: .4s
+
+@keyframes  zoom
+    0%
+        transform: scale(0)
+        margin-top: 50%
+        
+    100%
+        transform: scale(1)
+        margin-top: 0 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .image
+//     width: 100%
+//     height: 100%
+//     transition: opacity .5s ease
+//     backface-visibility: hidden
+
+// .intro
+//     position: absolute
+//     top: 0
+//     left: 0
+//     background-color: #66d166
+//     height: 100%
+//     width: 100%
+//     opacity: 0
+//     transition: opacity 0.8s ease
+
+// .intro
+//     opacity: 0
+//     position: absolute
+//     top: 0
+//     left: 0
+//     width: 100%
+//     height: 100%
+//     transition: opacity .5s ease
+
+
+// .intro p 
+//     position: absolute
+//     top: 45%
+//     left: 50%
+//     transform: translate(-50%, -50%)
+//     color: white
+//     background-color: #308b30
+//     padding: 5px 18px
+//     font-size: 34px
+//     font-weight: 600
+
+    
+// .container:hover .intro 
+//     opacity: 1 
+
+// .container:hover .image
+//     opacity: 0.5
+    

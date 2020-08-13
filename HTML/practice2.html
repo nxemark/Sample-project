@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Modal</title>
+      <link rel="stylesheet" href="../CSS/style.css">
+    </head>
+    <body>
+      <h1>How to add a modal to a page with CSS and Javascript</h1>
+      <p>The first step is to add the image and the modal HTML and then style them knowing that they
+          have different properties.The next step is to position them and then add some javascript to 
+          let the browser know when to do certain things.
+      </p>
+
+      <img src="../Images/calm.jpg" alt="Image of the beach" width="400" height="250" class="image2" id="image2">
+
+      <div class="modal" id="myModal">
+          <span id="close" class="close">&times;</span>
+          <img id="image4" class="image4" src="" onclick="openmodal()"></img>
+          <div class="caption" id="captionText"></div>
+      </div><br><br><br>
+
+      <input type="submit" class="button" value="Submit"><br><br>
+      <button class="button1"><span>Next </span></button><br><br>
+      <input type="submit" class="button2" value="Click"><br><br>
+      <input type="submit" class="button3" value="Hover"><br><br>
+      <button type="submit" class="button4" value="Click">Click</button><br><br>
+ 
+      <div class="pagecenter">
+      <div class="pagination">
+          <a href="">&laquo;</a>
+          <a href="" class="active">1</a>
+          <a href="">2</a>
+          <a href="">3</a>
+          <a href="">4</a>
+          <a href="">5</a>
+          <a href="">6</a>
+          <a href="">&raquo;</a>
+        </div>
+      </div>
+
+      <script>
+          var modal = document.getElementById("myModal");
+          var mainimage = document.getElementById("image2");
+          var modalimage = document.getElementById("image4");
+          var modalcaption = document.getElementById("captionText");
+          var closebutton = document.getElementById("close");
+
+          mainimage.onclick = function() {
+            modal.style.display = "block";
+            modalimage.src = this.src;
+            modalcaption.innerHTML = this.alt;
+          }
+
+          closebutton.onclick = function() {
+              modal.style.display = "none";
+          }
+      </script>
+    </body>
+</html>
