@@ -1,13 +1,9 @@
 body {
   background: white; }
 
-input[type=submit] {
-  float: right;
-  border: none;
-  background-color: #c95353;
-  padding: 10px 25px;
-  border-radius: 5px;
-  color: white; }
+* {
+  box-sizing: border-box;
+  font-family: sans-serif; }
 
 * {
   box-sizing: border-box; }
@@ -41,74 +37,231 @@ input[type=submit] {
   width: 50%;
   display: block; }
 
-.polaroid {
+.image2 {
+  border-radius: 5px;
   display: block;
-  background-color: white;
-  margin: auto;
-  margin-top: 200px;
-  width: 400px;
-  height: auto;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 30, 0, 0.2), 0 8px 20px 0 rgba(30, 0, 0, 0.19);
-  position: relative;
-  animation-name: color;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; }
+  margin-top: 5%;
+  transition: opacity 0.4s;
+  width: 100%;
+  max-width: 400px; }
+  .image2:hover {
+    opacity: 0.6; }
 
-.polaroid::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  height: 200px;
-  width: 20px;
-  background: black;
-  background-color: red; }
-
-.image {
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.9; }
+  padding-top: 50px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none; }
+  .modal .close {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    font-size: 30px;
+    color: #cccccc;
+    transition: 0.3s;
+    cursor: pointer; }
+    .modal .close:hover {
+      color: #ffffff; }
+  .modal .image4 {
+    display: block;
+    margin: auto;
+    width: 80%;
+    object-fit: cover;
+    max-width: 800px;
+    cursor: pointer; }
 
-.polaroid p {
-  padding-bottom: 15px;
+@media screen and (max-width: 700px) {
+  .image4 {
+    width: 100% !important; } }
+.caption {
+  color: #f3f3f3;
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 15px; }
+
+.image4,
+.caption {
+  animation-name: zoom;
+  animation-duration: 0.4s; }
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+    margin-top: 50%; }
+  100% {
+    transform: scale(1);
+    margin-top: 0; } }
+.spotify-header {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 30px 0;
+  padding: 15px 0 10px 0; }
+  .spotify-header img {
+    height: 100px;
+    width: 100px;
+    margin-top: -15px;
+    margin-right: -0.5%; }
+  .spotify-header h1 {
+    font-family: sans-serif;
+    font-size: 35px;
+    margin-right: 3%;
+    font-weight: 700; }
+
+.hr {
+  border: 0.5px solid black;
+  margin-top: -35px;
+  opacity: 0.1; }
+
+.facebookcontainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%; }
+
+.fbutton {
+  color: white;
+  border: none;
+  background-color: #244d99;
+  padding: 15px;
+  width: 450px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  background-image: url("../Images/flogo.png");
+  background-position: 75px 12px;
+  background-repeat: no-repeat;
+  transition: 0.3s; }
+  .fbutton:hover {
+    background-color: #3a64b3; }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; }
+
+.applecontainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%; }
+
+.abutton {
+  color: white;
+  border: none;
+  background-color: black;
+  padding: 15px;
+  width: 450px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  background-image: url("../Images/applelogo.png");
+  background-repeat: no-repeat;
+  background-position: 95px 15px;
+  transition: 0.3s; }
+  .abutton:hover {
+    background-color: #353535; }
+
+.or {
+  font-size: 10px;
+  padding: 0 15px 0 15px; }
+
+.line {
+  border: 1px solid black;
+  width: 200px;
+  opacity: 0.1; }
+
+.formcontainer {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 450px;
+  margin: auto;
+  flex-wrap: wrap; }
+
+input[type="email"] {
+  width: 100%;
+  padding: 13px 10px;
+  margin: 10px auto;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  outline: none;
+  border: 1px solid black; }
+
+input[type="password"] {
+  width: 100%;
+  padding: 13px 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.5);
+  outline: none;
+  transition: 0.5s;
+  border: 1px solid black; }
+
+.logcontainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin: 30px 0; }
+
+.remember {
+  padding: 0;
+  padding-right: 2px;
+  margin: 0;
+  margin-bottom: -5px;
+  height: 20px;
+  width: 28px; }
+
+.login {
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 16px 14px 18px 14px;
+  background-color: #0daf46;
+  width: 200px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: 0.3s; }
+  .login:hover {
+    background-color: #0abe49; }
+
+.forgotpass {
+  margin-top: -9px;
+  color: #0ab349;
   text-align: center; }
 
-@keyframes color {
-  0% {
-    filter: hue-rotate(0deg);
-    left: 0px; }
-  10% {
-    filter: hue-rotate(100deg);
-    left: 10px; }
-  20% {
-    filter: hue-rotate(200deg);
-    left: 20px; }
-  30% {
-    filter: hue-rotate(300deg);
-    left: 30px; }
-  40% {
-    filter: hue-rotate(400deg);
-    left: 40px; }
-  50% {
-    filter: hue-rotate(500deg);
-    left: 50px; }
-  60% {
-    filter: hue-rotate(600deg);
-    left: 60px; }
-  70% {
-    filter: hue-rotate(700deg);
-    left: 70px; }
-  80% {
-    filter: hue-rotate(800deg);
-    left: 80px; }
-  90% {
-    filter: hue-rotate(900deg);
-    left: 90px; }
-  100% {
-    filter: hue-rotate(1000deg);
-    left: 100px;
-    transform: rotate(360deg); } }
+.newaccount {
+  margin-top: 35px;
+  font-weight: 600;
+  text-align: center; }
+
+.signup {
+  border: none;
+  border: 2px solid black;
+  border-radius: 40px;
+  width: 425px;
+  margin: auto;
+  text-align: center;
+  padding: 14px;
+  background-color: white;
+  font-size: 15px;
+  font-weight: 700;
+  opacity: 0.6;
+  transition: 0.4s; }
+  .signup:hover {
+    background-color: #303030;
+    border: 2px solid transparent;
+    color: white; }
 
 /*# sourceMappingURL=style.css.map */
